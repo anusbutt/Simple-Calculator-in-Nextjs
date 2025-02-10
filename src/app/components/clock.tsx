@@ -27,9 +27,8 @@ export default function Clock() {
         const seconds = time.getSeconds().toString().padStart(2, "0");
 
         if (!is24Hours) {
-            const amPm = hours >= 12 ? "PM" : "AM";
             hours = hours % 12 || 12; 
-            return `${hours.toString().padStart(2, "0")}:${minutes}:${seconds} ${amPm}`;
+            return `${hours.toString().padStart(2, "0")}:${minutes}:${seconds} `;
         } else {
             return `${hours.toString().padStart(2, "0")}:${minutes}:${seconds}`;
         }
